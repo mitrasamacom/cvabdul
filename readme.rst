@@ -1,14 +1,14 @@
 ###################
-What is CodeIgniter
+Apa itu Cvabdul
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Cvabdul adalah sebuah engine web yang dibangun dengan bahasa pemrogramman php
+berlandaskan framework Codeigniter yang terkenal dengan MVC sehingga bisa
+memudahkan engineer web lain untuk mengembangkan berbagai macam sistem object 
+oriented. Selain itu Cvabdul menggunakan user interface bootstrap yang sudah
+sangat familiar di kalangan engineer web, sehingga lebih uptodate pada perkembangan.
+dengan adanya Engine Cvabdul ini diharapkan para web developer menjadi lebih
+dipermudah dalam pengembangan, dan lebih bisa fokus untuk kesempurnaan system.
 
 *******************
 Release Information
