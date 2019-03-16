@@ -56,15 +56,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('index.php/charts'); ?>">
-                  <span data-feather="pie-chart"></span>
-                  Charts
-                </a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('index.php/forms'); ?>">
                   <span data-feather="edit"></span>
                   Forms
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('index.php/charts'); ?>">
+                  <span data-feather="pie-chart"></span>
+                  Charts
                 </a>
               </li>
               <li class="nav-item">

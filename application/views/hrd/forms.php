@@ -43,14 +43,16 @@
                       </tfoot>
                       <tbody>
                         <?php
+                          $no=0;
                           foreach($data->result_array() as $tampilkan):
+                            $no++;
                             $id = $tampilkan['id'];
                             $nama = $tampilkan['nama'];
                             $harga = $tampilkan['harga'];
                             $jumlah = $tampilkan['jumlah'];
                         ?>
                         <tr>
-                          <td align="center" width="30"><?php echo $id; ?></td>
+                          <td align="center" width="30"><?php echo $no; ?></td>
                           <td>&nbsp;&nbsp;<?php echo $nama; ?></td>
                           <td align="center">Rp. <?php echo $harga; ?></td>
                           <td align="center"><?php echo $jumlah; ?> unit</td>
