@@ -51,4 +51,11 @@ class Forms extends CI_Controller{
         redirect('forms');
     }
 
+    function Cetak(){
+
+        if($level == '1'){
+            $this->load->view('admin/cetak');
+        }
+    }
+
 }

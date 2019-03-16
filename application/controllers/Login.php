@@ -19,18 +19,8 @@ class Login extends CI_Controller{
         $this->load->view('manager/header');
         $this->load->view('manager/dashboard');
         $this->load->view('manager/footer');
-      }else if($this->session->userdata('level')==='3'){ //ketika admin berhasil login
-        $this->load->view('admin/header');
-        $this->load->view('admin/dashboard');
-        $this->load->view('admin/footer');
-      }else if($this->session->userdata('level')==='4'){ //ketika supervisor berhasil login
-        $this->load->view('supervisor/header');
-        $this->load->view('supervisor/dashboard');
-        $this->load->view('supervisor/footer');
-      }else if($this->session->userdata('level')==='5'){ //ketika owner berhasil login
-        $this->load->view('owner/header');
-        $this->load->view('owner/dashboard');
-        $this->load->view('owner/footer');
+      }else{ //ketika admin berhasil login
+        echo "Access Denied";
       }
     }
   }
