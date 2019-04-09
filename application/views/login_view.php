@@ -1,128 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cvabdul halaman login</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-	<link rel="shortcut icon" type="image/png" href="<?php echo base_url('assets/image/favicon.png'); ?>"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Log in</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/bower_components/bootstrap/dist/css/bootstrap.min.css') ?>">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?php echo base_url('/assets/bower_components/font-awesome/css/font-awesome.min.css') ?>">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="<?php echo base_url('/assets/bower_components/Ionicons/css/ionicons.min.css') ?>">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?php echo base_url('/assets/dist/css/AdminLTE.min.css') ?>">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="<?php echo base_url('/assets/plugins/iCheck/square/blue.css') ?>">
 
-	<style>
-			body,
-			html {
-				margin: 0;
-				padding: 0;
-				height: 100%;
-				background: #60a3bc !important;
-			}
-			.user_card {
-				height: 400px;
-				width: 350px;
-				margin-top: auto;
-				margin-bottom: auto;
-				background: #f39c12;
-				position: relative;
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				padding: 10px;
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-				-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-				-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-				border-radius: 5px;
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
-			}
-			.brand_logo_container {
-				position: absolute;
-				height: 170px;
-				width: 170px;
-				top: -75px;
-				border-radius: 50%;
-				background: #60a3bc;
-				padding: 10px;
-				text-align: center;
-			}
-			.brand_logo {
-				height: 150px;
-				width: 150px;
-				border-radius: 50%;
-				border: 2px solid white;
-			}
-			.form_container {
-				margin-top: 100px;
-			}
-			.login_btn {
-				width: 100%;
-				background: #c0392b !important;
-				color: white !important;
-			}
-			.login_btn:focus {
-				box-shadow: none !important;
-				outline: 0px !important;
-			}
-			.login_container {
-				padding: 0 2rem;
-			}
-			.input-group-text {
-				background: #c0392b !important;
-				color: white !important;
-				border: 0 !important;
-				border-radius: 0.25rem 0 0 0.25rem !important;
-			}
-			.input_user,
-			.input_pass:focus {
-				box-shadow: none !important;
-				outline: 0px !important;
-			}
-			.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-				background-color: #c0392b !important;
-			}
-	</style>
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body>
-	<div class="container h-100">
-		<div class="d-flex justify-content-center h-100">
-			<div class="user_card">
-				<div class="d-flex justify-content-center">
-					<div class="brand_logo_container">
-						<img src="<?php echo base_url('assets/image/logocvabdul.png'); ?>" class="brand_logo" alt="Logo">
-					</div>
-				</div>
-				<div class="d-flex justify-content-center form_container">
-					<form action="<?php echo site_url('login/auth');?>" method="post">
-						<div class="input-group mb-3">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-user"></i></span>
-							</div>
-							<input type="text" name="email" class="form-control input_user" value="" placeholder="username">
-						</div>
-						<div class="input-group mb-2">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
-							</div>
-							<input type="password" name="password" class="form-control input_pass" value="" placeholder="password">
-						</div>
-						<div class="form-group"> 
-							<div class="custom-control custom-checkbox">
-								<input type="checkbox" class="custom-control-input" id="customControlInline">
-								<label class="custom-control-label" for="customControlInline">Remember me</label>
-							</div>
-						</div>
-				</div>
-				<div class="d-flex justify-content-center mt-3 login_container">
-					<button type="submit" name="button" class="btn login_btn">Login</button>
-				</div>
-					</form>
-				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Belum memiliki akun? <a href="#" class="ml-2">Daftar</a>
-					</div>
-					<div class="d-flex justify-content-center links">
-						<a href="#">Lupa password kamu?</a> 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="../../index2.html"><b>CV</b>ABDUL</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">Sign in to start your session</p>
+
+    <form action="<?php echo site_url('login/auth');?>" method="post">
+      <div class="form-group has-feedback">
+        <input type="text" name="email" class="form-control" placeholder="Email">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" name="password" class="form-control" placeholder="Password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox"> Remember Me
+            </label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+
+    <div class="social-auth-links text-center">
+      
+    </div>
+    <!-- /.social-auth-links -->
+
+    <a href="#">I forgot my password</a><br>
+    <a href="register.html" class="text-center">Register a new membership</a>
+
+  </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery 3 -->
+<script src="<?php echo base_url('/assets/bower_components/jquery/dist/jquery.min.js') ?>"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="<?php echo base_url('/assets/bower_components/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
+<!-- iCheck -->
+<script src="<?php echo base_url('/assets/plugins/iCheck/icheck.min.js') ?>"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
+    });
+  });
+</script>
 </body>
 </html>

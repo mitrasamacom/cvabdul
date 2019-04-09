@@ -8,13 +8,13 @@ class Page extends CI_Controller{
     }
   }
 
-  // ################################################### DASHBOARD HRD [1] ##########################################
+  // ################################################### DASHBOARD admin [1] ##########################################
   function index(){
-    //Ketika yang login adalah HRD maka akan menampilkan folder view HRD
+    //Ketika yang login adalah admin maka akan menampilkan folder view admin
     if($this->session->userdata('level')==='1'){
-        $this->load->view('hrd/header');
-        $this->load->view('hrd/dashboard');
-        $this->load->view('hrd/footer');
+        $this->load->view('admin/header');
+        $this->load->view('admin/dashboard');
+        $this->load->view('admin/footer');
     }else{
         echo "Access Denied";
     }

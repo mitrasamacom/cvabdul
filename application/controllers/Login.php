@@ -9,12 +9,12 @@ class Login extends CI_Controller{
   function index(){
     if($this->session->userdata('logged_in') !== TRUE){ //jika gagal login
       $this->load->view('login_view');
-      $this->load->view('hrd/footer');
+      //$this->load->view('admin/footer');
     }else{ //jika berhasil login
-      if($this->session->userdata('level')==='1'){ //ketika hrd berhasil login
-        $this->load->view('hrd/header');
-        $this->load->view('hrd/dashboard');
-        $this->load->view('hrd/footer');
+      if($this->session->userdata('level')==='1'){ //ketika admin berhasil login
+        $this->load->view('admin/header');
+        $this->load->view('admin/dashboard');
+        $this->load->view('admin/footer');
       }else if($this->session->userdata('level')==='2'){ //ketika manager berhasil login
         $this->load->view('manager/header');
         $this->load->view('manager/dashboard');
@@ -44,7 +44,7 @@ class Login extends CI_Controller{
             'logged_in' => TRUE
         );
         $this->session->set_userdata($sesdata);
-        // jika yang login HRD
+        // jika yang login admin
         if($level === '1'){
             redirect('page');
 
