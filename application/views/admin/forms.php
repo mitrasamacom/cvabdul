@@ -216,6 +216,8 @@
                   <th>Nama</th>
                   <th>Harga</th>
                   <th>Jumlah</th>
+                  <th>Kondisi</th>
+                  <th>Keterangan</th>
                   <th>Aksi</th>
                 </tr>
                 </thead>
@@ -228,14 +230,18 @@
                     $nama = $tampilkan['nama'];
                     $harga = $tampilkan['harga'];
                     $jumlah = $tampilkan['jumlah'];
+                    $kondisi = $tampilkan['kondisi'];
+                    $keterangan = $tampilkan['keterangan'];
                 ?>
                 <tr>
                   <td align="center" width="30"><?php echo $no; ?></td>
                   <td>&nbsp;&nbsp;<?php echo $nama; ?></td>
                   <td>Rp. <?php echo $harga; ?></td>
                   <td><?php echo $jumlah; ?> unit</td>
-                  <td>
-                  <div class="btn-group" role="group" aria-label="Basic example">
+                  <td><?php echo $kondisi; ?> unit</td>
+                  <td><?php echo $keterangan; ?> unit</td>
+                  <td width="120">
+                    <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#Detail<?php echo $id; ?>"><i class="fa fa-eye"></i></button>
                         <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#Ubah<?php echo $id; ?>"><i class="fa fa-edit"></i></button>
                         <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#Hapus<?php echo $id; ?>"><i class="fa fa-trash"></i></button>
@@ -345,6 +351,8 @@
                   <th>Nama</th>
                   <th>Harga</th>
                   <th>Jumlah</th>
+                  <th>Kondisi</th>
+                  <th>Keterangan</th>
                   <th>Aksi</th>
                 </tr>
                 </tfoot>
