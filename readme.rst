@@ -11,6 +11,13 @@ dengan adanya Engine Cvabdul ini diharapkan para web developer menjadi lebih
 dipermudah dalam pengembangan, dan lebih bisa fokus untuk kesempurnaan system.
 
 *******************
+Official Site
+*******************
+
+`CVABDUL Documentation
+<https://www.cvabdul.com/>`_
+
+*******************
 Release Information
 *******************
 
